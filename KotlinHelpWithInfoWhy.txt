@@ -1,0 +1,46 @@
+Can you help me fix this 
+
+ERROR: Main.kt (7:15) Unsupported [Collection literals outside of annotations]
+
+fun Box(a: String) {
+    return println("[${a}]")
+    
+} 
+fun main() {
+    
+  val emoji = ["😀", "😃", "😄", "😁", "😆", "😅", "😂", "🤣", "😭", "😉", "😗", "😙", "😚", "😘", "🥰", "😍", "🤩", "🥳", "🫠", "🙃", "🙂", "🥲", "🥹", "😊", "☺️", "😌", "😏", "🤤", "😋", "😛", "😝", "😜", "🤪", "🥴", "😔", "🥺", "😬", "😑", "😐", "😶", "😶‍🌫️", "🫥", "🤐", "🫡", "🤔", "🤫", "🫢", "🤭", "🥱", "🤗", "🫣", "😱", "🤨", "🧐", "😒", "🙄", "😮‍💨", "😤", "😡", "🤬", "😞", "😓", "😟", "😥", "😢", "☹️", "🙁", "🫤", "😕", "😰", "😨", "😧", "😦", "😮", "😯", "😲", "😳", "🤯", "😖", "😣", "😩", "😫", "😵", "😵‍💫", "🫨", "🥶", "🥵", "🤢", "🤮", "😴", "😪", "🤧", "🤒", "🤕", "😷", "🤥", "😇", "🤠", "🤑", "🤓", "😎", "🥸", "🤡", "😈", "👿", "👻", "💀", "☠️", "👹", "👺", "🎃", "💩", "🤖", "👽", "👾", "🌚", "🌝", "🌞", "🌛", "🌜", "🙈", "🙉", "🙊", "😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾", "💫", "⭐", "🌟", "✨", "💥", "💨", "💦", "💤", "🕳️", "🔥", "💯", "🎉", "❤️", "🧡", "💛", "💚", "🩵", "💙", "💜", "🤎", "🖤", "🩶", "🤍", "🩷", "💘", "💝", "💖", "💗", "💓", "💞", "💕", "💌", "💟", "♥️", "❣️", "❤️‍🩹", "💔", "❤️‍🔥", "💋", "🫂", "👥", "👤", "🗣️", "👣", "🧠", "🫀", "🫁", "🩸", "🦠", "🦷", "🦴", "👀", "👁️", "👄", "🫦", "👅", "👃", "👂", "🦻", "🦶", "🦵", "🦿", "🦾", "💪", "👏", "👍", "👎", "🫶", "🙌", "👐", "🤲", "🤜", "🤛", "✊", "👊", "🫳", "🫴", "🫱", "🫲", "🫸", "🫷", "👋", "🤚", "🖐️", "✋", "🖖", "🤟", "🤘", "✌️" , "🤞", "🫰", "🤙", "🤌", "🤏", "👌", "🫵", "👉", "👈", "☝️", "👆", "👇", "🖕", "✍️", "🤳", "🙏", "💅", "🤝", "🙇", "🙋", "💁", "🙆", "🙅", "🤷", "🤦", "🙍", "🙎", "🧏", "💆", "💇", "🧖", "🛀", "🛌", "🧘", "🧍", "🤸", "🧎", "🧑‍🦼", "🧑‍🦽", "🧑‍🦯", "🚶", "🏃", "⛹️", "🤾", "🚴", "🚵", "🧗", "🏋️", "🤼", "🤹", "🏌️", "🏇", "🤺", "⛷️", "🏂", "🪂", "🏄", "🏄", "🚣", "🏊", "🤽", "🧜", "🧚", "🧞", "🧝", "🧙", "🧛", "🧟", "🧌", "🦸", "🦹", "🥷",  "🧑‍🎄", "👼", "💂", "🫅", "🤵", "👰", "🧑‍🚀", "👷", "👮", "🕵️", "🧑‍✈️", "🧑‍🔬", "🧑‍⚕️", "🧑‍🔧", "🧑‍🏭", "🧑‍🚒", "🧑‍🌾", "🧑‍🏫", "🧑‍🎓", "🧑‍💼", "🧑‍⚖️", "🧑‍💻", "🧑‍🎤", "🧑‍🎨", "🧑‍🍳", "👳", "🧕", "👲", "👶", "🧒", "🧑", "🧓", "🧑‍🦳", "🧑‍🦰", "👱", "🧑‍🦱", "🧑‍🦲", "🧔", "🕴️", "💃", "🕺", "👯", "🧑‍🤝‍🧑", "👭", "👬", "👫", "💏", "👩‍❤️‍💋‍👨", "👨‍❤️‍💋‍👨", "👩‍❤️‍💋‍👩", "💑", "👩‍❤️‍👨", "👩‍❤️‍👩", "🫄", "🤱", "🧑‍🍼"]
+  Box("🌿")
+  println(emoji.size)
+  
+}
+  /* while( val i = 0; i < emoj; i++) 
+      println(emoji[i]) */
+
+
+Absolutely! Here's how to fix the error and a bit about working with your emoji list:
+The Fix
+The same issue is causing the error: you need to use listOf() or mutableListOf(). Let's use listOf() for an immutable emoji list:
+fun Box(a: String) {
+    println("[${a}]")    
+} 
+
+fun main() {    
+  val emoji = listOf("😀", "😃", "😄", /* ... and so on */ )
+  Box("🌿")
+  println(emoji.size)  
+}
+
+Printing the Emojis
+Now that you have a proper list, here's how to print the emojis:
+fun main() {   
+  // ... (your existing code)
+
+  for (singleEmoji in emoji) {
+      println(singleEmoji) 
+  }
+}
+
+Key Points
+ * Collections in Kotlin: Kotlin requires you to use functions like listOf() (immutable) or mutableListOf() (modifiable) to create collections like lists.
+ * Loops: The for loop lets you iterate through each singleEmoji in your emoji list.
+Let me know if you'd like help shortening the list of emojis in your code - there are ways to make it more compact!
